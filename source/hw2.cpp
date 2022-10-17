@@ -213,7 +213,7 @@ int main( int argc, char *argv[] ){
 
     map[frog->x][frog->y] = '0' ;
 
-    //Print the map into screen
+
     for( i = 0; i <= ROW; ++i)
         puts( map[i] );
 
