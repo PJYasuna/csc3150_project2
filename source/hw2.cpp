@@ -245,7 +245,7 @@ int main( int argc, char *argv[] ){
         printf("You lose the game!!\n");
     }
     if (flag == 2) {
-        printf("You win the game!!\n");
+        printf("You win the game!!!\n");
     }
     if (flag == 3) {
         printf("You exit the game!!\n");
