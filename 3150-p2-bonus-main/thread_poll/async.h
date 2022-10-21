@@ -14,7 +14,7 @@
 // } my_item_t;
 
 
-typedef struct threadpool_t threadpool_t;
+
 // typedef struct my_queue {
 //   int size;
 //   my_item_t *head;
