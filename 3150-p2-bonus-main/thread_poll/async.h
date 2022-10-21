@@ -20,9 +20,24 @@
 //   my_item_t *head;
 
 //   /* TODO: More stuff here, maybe? */
-// } my_queue_t;
+// } my_pool;
+typedef struct {
+    void (*function)(int);
+    int argument;
+} one_task;
+
+typedef struct my_pool {
+  pthread_mutex_t lock;
+  pthread_cond_t call;
+  pthread_t *threads;
+  one_task *queue;
+  int queue_size;
+  int head;
+  int tail;
+  int count;
+} my_pool_t;
 
 void async_init(int);
 void async_run(void (*fx)(int), int args);
-static void *threadpool_thread(void *t);
+static void *one_thread(void *t);
 #endif
